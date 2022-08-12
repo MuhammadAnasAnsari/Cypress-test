@@ -28,7 +28,11 @@
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "cy:run_spec": "npx cypress run --spec 'cypress/integration/testWithPageObjects.js'",
-    "cy:run_browser": "npm run cy:run_spec -- --browser chrome"
+    "cy:run_chromebrowser": "npm run cy:run_spec -- --browser chrome",
+    "cy:run_edgebrowser": "npm run cy:run_spec -- --browser edge",
+    "cy:run_firefoxbrowser": "npm run cy:run_spec -- --browser firefox",
+    "cy:run_electronbrowser": "npm run cy:run_spec -- --browser electron",
+    "cy:run_allbrowsers": "npm run cy:run_spec -- --browser chrome & npm run cy:run_spec -- --browser edge & npm run cy:run_spec -- --browser firefox & npm run cy:run_spec -- --browser electron"
   },
   "dependencies": {
     "@agm/core": "^1.1.0",
@@ -92,7 +96,7 @@
     "@types/node": "6.0.90",
     "codelyzer": "^5.0.1",
     "conventional-changelog-cli": "^2.1.1",
-    "cypress": "^9.6.1",
+    "cypress": "^10.4.0",
     "husky": "0.13.3",
     "jasmine-core": "2.6.4",
     "jasmine-spec-reporter": "4.1.1",
