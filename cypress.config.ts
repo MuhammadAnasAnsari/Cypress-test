@@ -1,6 +1,8 @@
+import { ɵCodegenComponentFactoryResolver } from '@angular/core'
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
+  projectId: 'z3rucx',
   viewportHeight: 768,
   viewportWidth: 1024,
   e2e: {

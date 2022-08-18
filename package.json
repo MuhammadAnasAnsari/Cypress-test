@@ -27,12 +27,13 @@
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
-    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/testWithPageObjects.cy.js' --headed",
+    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/testWithPageObjects.cy.js' --headed --record --key=f0931fa3-3283-404d-99d7-91a4f9534386",
     "cy:run_chromebrowser": "npm run cy:run_spec -- --browser chrome",
     "cy:run_edgebrowser": "npm run cy:run_spec -- --browser edge",
     "cy:run_firefoxbrowser": "npm run cy:run_spec -- --browser firefox",
     "cy:run_electronbrowser": "npm run cy:run_spec -- --browser electron",
-    "cy:run_allbrowsers": "npm run cy:run_spec -- --browser chrome & npm run cy:run_spec -- --browser edge & npm run cy:run_spec -- --browser firefox & npm run cy:run_spec -- --browser electron"
+    "cy:run_allbrowsers": "npm run cy:run_spec -- --browser chrome & npm run cy:run_spec -- --browser edge & npm run cy:run_spec -- --browser firefox & npm run cy:run_spec -- --browser electron",
+    "cy:run_groupbrowsers" : "npm run cy:run_spec -- --browser chrome --group Chrome --ci-build-id 1 &  npm run cy:run_spec -- --browser firefox --group Firefox  --ci-build-id 1"
   },
   "dependencies": {
     "@agm/core": "^1.1.0",
