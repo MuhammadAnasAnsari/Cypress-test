@@ -33,7 +33,11 @@
     "cy:run_firefoxbrowser": "npm run cy:run_spec -- --browser firefox",
     "cy:run_electronbrowser": "npm run cy:run_spec -- --browser electron",
     "cy:run_allbrowsers": "npm run cy:run_spec -- --browser chrome & npm run cy:run_spec -- --browser edge & npm run cy:run_spec -- --browser firefox & npm run cy:run_spec -- --browser electron",
-    "cy:run_groupbrowsers" : "npm run cy:run_spec -- --browser chrome --group Chrome --ci-build-id 1 &  npm run cy:run_spec -- --browser firefox --group Firefox  --ci-build-id 1"
+    "cy:run_groupbrowsers" : "npm run cy:run_spec -- --browser chrome --group Chrome --ci-build-id 1 &  npm run cy:run_spec -- --browser firefox --group Firefox  --ci-build-id 1",
+    "cy:run2" :  "npx cypress run --headless --record --key=f0931fa3-3283-404d-99d7-91a4f9534386 --parallel --ci-build-id 1 ",
+    "cy:run_p" : "npm run cy:run2 & npm run cy:run2"
+  
+  
   },
   "dependencies": {
     "@agm/core": "^1.1.0",
